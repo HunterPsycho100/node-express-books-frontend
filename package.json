@@ -2,8 +2,13 @@
   "name": "express-books-frontend",
   "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
+  "main": "./bin/www",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test available\" && exit 1"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -14,7 +19,6 @@
     "pug": "^3.0.2"
   },
   "description": "frontend of the final netcentric project",
-  "main": "app.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
