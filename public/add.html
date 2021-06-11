@@ -13,7 +13,7 @@
     <h1>Add Book</h1>
     <div class="container">
         <form method="POST"
-              action="https://arias-spu-students.herokuapp.com/api/students/">
+              action="https://shrouded-cove-22805.herokuapp.com/api/students/">
             <h2>Please provide your book information</h2>
             <div class="mb-3 form-group">
                 <label for="title">title:</label>
@@ -55,7 +55,7 @@
 </div>
 <script>
     document.getElementById("btnAddBook").addEventListener("click", (event) =>{
-        let url = "https://arias-spu-students.herokuapp.com/api/students/"
+        let url = "https://shrouded-cove-22805.herokuapp.com/api/students/"
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function (){
             if (this.readyState == 4 && this.status == 200){
