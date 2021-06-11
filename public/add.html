@@ -27,7 +27,7 @@
             </div>
             <div class="mb-3 form-group">
                 <label for="year">Year:</label>
-                <input type="number" step="0.001" name="year" id="year" class="form-control"
+                <input type="number" step="1" name="year" id="year" class="form-control"
                        placeholder="Book Year">
             </div>
             <div class="mb-3 form-group">
@@ -41,18 +41,8 @@
             </div>
             <div class="mb-3 form-group">
                 <label for="price">Price:</label>
-                <input type="number" step="0.001" name="price" id="price" class="form-control"
+                <input type="number" step="0.01" name="price" id="price" class="form-control"
                        placeholder="Book Price">
-            </div>
-            <div class="mb-3 form-group">
-                <label for="major">Major:</label>
-                <select class="form-select" id="major" name="major">
-                    <option value="Undecided" selected>Undecided</option>
-                    <option value="BUS">Business</option>
-                    <option value="CSC">Computer Science</option>
-                    <option value="MEC">Mechanical Engineering</option>
-                    <option value="PSY">Psychology</option>
-                </select>
             </div>
             <div class="mb-3 form-group">
                 <input type="submit" value="Submit">
@@ -60,7 +50,7 @@
         </form>
     </div>
     <div class="container">
-        <button class="btn btn-lg btn-outline-primary" id="btnAddAuthor">Add Book Author</button>
+        <button class="btn btn-lg btn-outline-primary" id="btnAddBook">Add Book</button>
     </div>
 </div>
 <script>
