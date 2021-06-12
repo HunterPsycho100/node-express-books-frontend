@@ -69,7 +69,6 @@
             '           <td>' + data[book]["hardcover"]+  '</td>\n' +
             '           <td>' + data[book]["price"]+  '</td>\n' +
             '       </tr>\n';
-            '       </tr>\n';
 
         table +=
             '   </tbody>\n' +
@@ -103,7 +102,6 @@
                 '           <td>' + data[book]["hardcover"]+  '</td>\n' +
                 '           <td>' + data[book]["price"]+  '</td>\n' +
                 '       </tr>\n';
-                '       </tr>\n';
         }
 
         table +=
@@ -112,7 +110,7 @@
         return table;
     }
     document.getElementById("getTitle").addEventListener("click", (event) =>{
-        let url = "https://dry-hollows-02853.herokuapp.com/api/books/" + document.getElementById("title").value
+        let url = "https://shrouded-cove-22805.herokuapp.com/api/books/" + document.getElementById("title").value
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function (){
             if (this.readyState == 4 && this.status == 200){
