@@ -31,7 +31,7 @@
     <h1>Add Book</h1>
     <div class="container">
         <form method="POST"
-              action="https://shrouded-cove-22805.herokuapp.com/api/books">
+              action="https://shrouded-cove-22805.herokuapp.com/api/books/">
             <h2>Please provide your book information</h2>
             <div class="mb-3 form-group">
                 <label for="title">Title:</label>
@@ -55,7 +55,7 @@
             </div>
             <div class="mb-3 form-group">
                 <label for="hardcover">Hardcover:</label>
-                <input type="radio" name="hardcover" id="hardcover" class="form-control">
+                <input type="text" name="hardcover" id="hardcover" class="form-control">
             </div>
             <div class="mb-3 form-group">
                 <label for="price">Price:</label>
@@ -73,7 +73,7 @@
 </div>
 <script>
     document.getElementById("btnAddBook").addEventListener("click", (event) =>{
-        let url = "https://shrouded-cove-22805.herokuapp.com/api/books"
+        let url = "https://shrouded-cove-22805.herokuapp.com/api/books/"
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function (){
             if (this.readyState == 4 && this.status == 200){
@@ -81,7 +81,7 @@
                     "<pre>" + this.responseText + "</pre>";
             } else if (this.readyState == 4 && this.status == 404) {
                 // if doesn't exist
-                let url2 = "https://shrouded-cove-22805.herokuapp.com/api/books"
+                let url2 = "https://shrouded-cove-22805.herokuapp.com/api/books/"
                 let xhttp2 = new XMLHttpRequest();
                 xhttp2.onreadystatechange = function(){
                     document.getElementById("output").innerHTML =
