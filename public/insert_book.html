@@ -55,7 +55,7 @@
             </div>
             <div class="mb-3 form-group">
                 <label for="hardcover">Hardcover:</label>
-                <input type="text" name="hardcover" id="hardcover" class="form-control">
+                <input type="radio" name="hardcover" id="hardcover" class="form-control">
             </div>
             <div class="mb-3 form-group">
                 <label for="price">Price:</label>
@@ -92,7 +92,7 @@
                     "Description=" + document.getElementById("description").value + "&" +
                     "Year=" + document.getElementById("year").value + "&" +
                     "Author=" + document.getElementById("author").value  + "&" +
-                    "Hardcover="  + document.getElementById("hardcover").value  + "&" +
+                    "Hardcover="  + document.getElementById("hardcover").checked  + "&" +
                     "Price="  + document.getElementById("price").value;
                 console.log(bookData);
                 xhttp2.open('POST', url2, true);
