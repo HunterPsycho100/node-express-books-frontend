@@ -28,7 +28,7 @@
 </nav>
 
 <div class="container">
-    <h1>Display all books with the same Title</h1>
+    <h1>Display books with your searched Title</h1>
     <form method = "GET" action = "https://shrouded-cove-22805.herokuapp.com/api/books/:title">
         <h2>Please enter the Title</h2>
         <div class = "form-group">
@@ -76,41 +76,8 @@
         return table;
     }
 
-    // function CreateTables(data){
-    //     let table = "";
-    //     table =
-    //         '<table class="table table-bordered table-hover"> \n' +
-    //         '   <thead>\n' +
-    //         '       <tr>\n' +
-    //         '           <th scope="col">Title</th> \n'+
-    //         '           <th scope="col">Description</th> \n'+
-    //         '           <th scope="col">Year</th> \n'+
-    //         '           <th scope="col">Author</th> \n'+
-    //         '           <th scope="col">Hardcover</th> \n'+
-    //         '           <th scope="col">Price</th> \n'+
-    //         '       </tr>\n' +
-    //         '   </thead>\n' +
-    //         '   <tbody>\n';
-    //
-    //     for (let books in data){
-    //         table +=
-    //             '       <tr>\n' +
-    //             '           <td>' + data[book]["title"]+  '</td>\n' +
-    //             '           <td>' + data[book]["description"]+  '</td>\n' +
-    //             '           <td>' + data[book]["year"]+  '</td>\n' +
-    //             '           <td>' + data[book]["author"]+  '</td>\n' +
-    //             '           <td>' + data[book]["hardcover"]+  '</td>\n' +
-    //             '           <td>' + data[book]["price"]+  '</td>\n' +
-    //             '       </tr>\n';
-    //     }
-    //
-    //     table +=
-    //         '   </tbody>\n' +
-    //         '</table>\n'
-    //     return table;
-    // }
     document.getElementById("getTitle").addEventListener("click", (event) =>{
-        let url = "https://shrouded-cove-22805.herokuapp.com/api/books/" + document.getElementById("title").value
+        let url = "https://shrouded-cove-22805.herokuapp.com/api/books?title=" + document.getElementById("title").value
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function (){
             if (this.readyState == 4 && this.status == 200){
